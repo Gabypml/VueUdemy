@@ -129,7 +129,7 @@ CSS
 
                     <div v-if="!inPageArticle" class="col-lg-8">
                         <div class="blog-lists">
-                            <div v-for="article in articles.data" class="single-blog-post">
+                            <div v-for="(article, i) in articles.data" class="single-blog-post">
                                 <div class="post-thumb relative">
                                     <div class="overlay overlay-bg"></div>
                                     <img class="img-fluid" :src="article.img" alt="">
@@ -137,9 +137,9 @@ CSS
                                 <div class="post-details">
                                     <ul class="tags"> 
                                         <li><a href="#">Fashion</a></li>
-                                        <li><a href="#">Music</a></li>
+                                        <li><a href="#">Music</a></li> 
                                     </ul>
-                                    <a class="pointerElement">
+                                    <a @click="showArticle(i)"class="pointerElement">
                                         <h1>{{article.title}}</h1>
                                     </a>
                                     <p>
@@ -153,7 +153,7 @@ CSS
                                         <div class="user-img">
                                             <img src="img/avatar1.jpg" alt="">
                                         </div>
-                                        <div class="details">
+                                        <div class="details"> 
                                             <a href="#">
                                                 <h4>Phil Martinez</h4>
                                             </a>
@@ -186,7 +186,7 @@ CSS
                         </div>
                     </div>
                     <!--Ajout de la page singleblog-->
-                    <div class="col-lg-8">
+                    <div v-else class="col-lg-8">
                         <div class="blog-details">
                             <div class="post-thumb relative">
                                 <div class="overlay overlay-bg"></div>

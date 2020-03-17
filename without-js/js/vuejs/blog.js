@@ -2,7 +2,7 @@ new Vue({
     el:'#app',
     data:{
         articles: {
-            data: [
+            data: [ 
                 {
                     title: 'To shewing another demands to.',
                     img: 'img/blog/p1.jpg'
@@ -22,7 +22,7 @@ new Vue({
                 {
                     title: 'To take a trivial example, which of us ever undertakes.',
                     img: 'img/blog/p5.jpg'
-                }
+                } 
             ]
         }
     

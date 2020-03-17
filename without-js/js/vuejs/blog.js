@@ -1,11 +1,10 @@
 new Vue({
-
-    el:'#app',
-    data:{
+    el: '#app',
+    data: {
         inPageArticle: false,
         articles: {
             currentIndex: 0,
-            data: [ 
+            data: [
                 {
                     title: 'To shewing another demands to.',
                     img: 'img/blog/p1.jpg'
@@ -25,27 +24,23 @@ new Vue({
                 {
                     title: 'To take a trivial example, which of us ever undertakes.',
                     img: 'img/blog/p5.jpg'
-                } 
+                }
             ]
-        },
-        
-        computed: {
-            currentArticle: function(){
-                return this.articles.data[this.articles.currentIndex]
-            }
-        },
-        
-        ////Faire gaffe ici pck je comprends pas bien T_T, tj pas 
-        methods: {
-            showArticle: function(i){
-                this.articles.currentIndex = i 
-                this.inPageArticle =true
-                window.scrollTo(0, 0)
-            },
-            mainLink: function(){
-                this.inPageArticle = false 
-            }
         }
-
+    },
+    computed: {
+        currentArticle: function() {
+            return this.articles.data[this.articles.currentIndex]
+        }
+    },
+    methods: {
+        showArticle: function(i) {
+            this.articles.currentIndex = i
+            this.inPageArticle = true
+            window.scrollTo(0, 0)
+        },
+        mainLink: function() {
+            this.inPageArticle = false 
+        }
     }
-})
+}) 

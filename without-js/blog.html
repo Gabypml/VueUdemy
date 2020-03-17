@@ -114,8 +114,15 @@ CSS
             <div class="container">
                 <div class="row section-gap-half">
                     <div class="col-lg-12 text-center">
-                        <h1>Articles</h1>
-                        <h4>Nos articles les plus récents</h4>
+                        <template v-if="inPageArticle">
+                            <h1>Articles</h1>
+                            <h4>Nos articles les plus récents</h4>
+                        </template>
+                        <template v-else>
+                            <h1>Articles de blog</h1>
+                            <h4>Détails sur l'un de nos articles</h4> 
+                        </template>
+                        
                     </div>
                 </div>
             </div>
@@ -190,7 +197,7 @@ CSS
                         <div class="blog-details">
                             <div class="post-thumb relative">
                                 <div class="overlay overlay-bg"></div>
-                                <img class="img-fluid" src="img/blog/p3.jpg" alt="">
+                                <img class="img-fluid" :src="currentArticle.img" alt="">
                             </div>
                             <div class="post-details">
                                 <ul class="tags">
@@ -198,7 +205,7 @@ CSS
                                     <li><a href="#">Dream</a></li>
                                 </ul>
                                 <a href="single-blog.html">
-                                    <h1>Awesome Design His many legs, pitifully thin compared with.</h1>
+                                    <h1>{{currentArticle.title}}</h1>
                                 </a>
                                 <p>
                                     Received shutters expenses ye he pleasant. Drift as blind above at up. No up simple

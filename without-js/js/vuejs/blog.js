@@ -27,23 +27,23 @@ new Vue({
                     img: 'img/blog/p5.jpg'
                 } 
             ]
-        }
+        },
         
         computed: {
-            currentProduct: function(){
-                return this.articles.data[this.products.currentIndex]
+            currentArticle: function(){
+                return this.articles.data[this.articles.currentIndex]
             }
         },
         
         ////Faire gaffe ici pck je comprends pas bien T_T, tj pas 
         methods: {
-            showProduct: function(i){
-                this.products.currentIndex = i 
-                this.inPageProduct =true
+            showArticle: function(i){
+                this.articles.currentIndex = i 
+                this.inPageArticle =true
                 window.scrollTo(0, 0)
             },
-            homeLink: function(){
-                this.inPageProduct = false 
+            mainLink: function(){
+                this.inPageArticle = false 
             }
         }
 

@@ -1,8 +1,10 @@
 new Vue({
-    
+
     el:'#app',
     data:{
+        inPageArticle: false,
         articles: {
+            currentIndex: 0,
             data: [ 
                 {
                     title: 'To shewing another demands to.',
@@ -26,6 +28,24 @@ new Vue({
                 } 
             ]
         }
-    
+        
+        computed: {
+            currentProduct: function(){
+                return this.articles.data[this.products.currentIndex]
+            }
+        },
+        
+        ////Faire gaffe ici pck je comprends pas bien T_T, tj pas 
+        methods: {
+            showProduct: function(i){
+                this.products.currentIndex = i 
+                this.inPageProduct =true
+                window.scrollTo(0, 0)
+            },
+            homeLink: function(){
+                this.inPageProduct = false 
+            }
+        }
+
     }
 })

@@ -30,9 +30,9 @@ CSS
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 
-<!--ajout de VUEjs-->
+    <!--ajout de VUEjs-->
 
-<script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
 
 </head>
 
@@ -40,7 +40,7 @@ CSS
 
 <body>
 
-    <main id="app"></main>
+    <main id="app">
 
         <!-- Start header section -->
         <header class="header-area" id="header-area">
@@ -65,7 +65,7 @@ CSS
                             </div>
 
                             <!-- Menu -->
-                            <div class="dope-menu">  
+                            <div class="dope-menu">
 
                                 <!-- close btn -->
                                 <div class="dopecloseIcon">
@@ -123,12 +123,10 @@ CSS
         <!-- End about-top-banner section -->
 
         <!-- Start blog-lists section -->
-        <section class="blog-lists-section section-gap-full">
+        <section class="blog-lists-section section-gap-full"> 
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8">
-                        <!--Ajout de vuejs-->
-                        <!--Ici repetition d'acticle donc : boucle V-FOR -->
                         <div class="blog-lists">
                             <div v-for="article in articles.data" class="single-blog-post">
                                 <div class="post-thumb relative">
@@ -136,7 +134,7 @@ CSS
                                     <img class="img-fluid" :src="article.img" alt="">
                                 </div>
                                 <div class="post-details">
-                                    <ul class="tags">
+                                    <ul class="tags"> 
                                         <li><a href="#">Fashion</a></li>
                                         <li><a href="#">Music</a></li>
                                     </ul>
@@ -161,9 +159,9 @@ CSS
                                             <p>April 15,2018</p>
                                         </div>
                                     </div>
-                                </div> 
+                                </div>
                             </div>
-
+                            
                             <nav>
                                 <ul class="pagination">
                                     <li class="page-item disabled">
